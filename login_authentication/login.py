@@ -48,6 +48,7 @@ def main():
                 print(
                     f"Maximum login attempts reached. Please try again in {TIMEOUT} seconds."
                 )
+                login_attempts = 0
                 time.sleep(TIMEOUT)
 
 
