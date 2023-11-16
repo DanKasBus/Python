@@ -1,5 +1,11 @@
 #!/usr/bin/python3
 
+"""
+Login Authentication
+
+A small script that handles login with a backoff timer
+"""
+
 import time
 import webbrowser
 
