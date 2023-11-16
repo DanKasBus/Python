@@ -10,7 +10,7 @@ import time
 import webbrowser
 
 # Define approved users and their corresponding passwords in a dictionary
-approved_users = {
+APPROVED_USERS = {
     "dkasp": "qweqweqwe",
     "jbarr": "qweqweqwe"
 }
@@ -28,7 +28,7 @@ while login_attempts < max_attempts:
     input_pass = input("Enter password: ")
 
     # Check if the input username exists in the dictionary and if the password is correct
-    if input_user in approved_users and input_pass == approved_users[input_user]:
+    if input_user in APPROVED_USERS and input_pass == APPROVED_USERS[input_user]:
         print("Login successful")
         
         # Open in a web browser- just a random redirect to a tab I had open 101
