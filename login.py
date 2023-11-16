@@ -16,16 +16,16 @@ APPROVED_USERS = {
 }
 
 # Timeout duration in seconds
-TIMEOUT = 30
+TIMEOUT: int = 30
+MAX_ATTEMPTS: int = 4
 
-DEST_LINK = "https://www.w3schools.com/python/python_lists.asp"
+DEST_LINK: str = "https://www.w3schools.com/python/python_lists.asp"
 
 def main():
     """The main method"""
 
     # Initialize login attempt counter w/  maximum allowed login attempts
-    login_attempts = 0
-    max_attempts = 4
+    login_attempts: int = 0
 
     while login_attempts < max_attempts:
         # Input username and password from the user
