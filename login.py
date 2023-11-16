@@ -15,7 +15,10 @@ APPROVED_USERS = {
     "jbarr": "qweqweqwe"
 }
 
+# Timeout duration in seconds
+TIMEOUT = 30
 
+DEST_LINK = "https://www.w3schools.com/python/python_lists.asp"
 
 def main():
     """The main method"""
@@ -23,9 +26,6 @@ def main():
     # Initialize login attempt counter w/  maximum allowed login attempts
     login_attempts = 0
     max_attempts = 4
-
-    # Timeout duration in seconds
-    timeout_duration = 30  # .5 minute
 
     while login_attempts < max_attempts:
         # Input username and password from the user
@@ -37,7 +37,7 @@ def main():
             print("Login successful")
             
             # Open in a web browser- just a random redirect to a tab I had open 101
-            webbrowser.open("https://www.w3schools.com/python/python_lists.asp")
+            webbrowser.open(DEST_LINK)
             
             break  # Exit the loop if login is successful
         
@@ -47,8 +47,8 @@ def main():
 
             # Check if the maximum attempts have been reached
             if login_attempts == max_attempts:
-                print(f"Maximum login attempts reached. Please try again in {timeout_duration} seconds.")
-                time.sleep(timeout_duration)
+                print(f"Maximum login attempts reached. Please try again in {TIMEOUT} seconds.")
+                time.sleep(TIMEOUT)
 
 
 
