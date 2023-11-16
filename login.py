@@ -44,3 +44,11 @@ while login_attempts < max_attempts:
         if login_attempts == max_attempts:
             print(f"Maximum login attempts reached. Please try again in {timeout_duration} seconds.")
             time.sleep(timeout_duration)
+
+
+def main():
+    """The main method"""
+
+
+if __name__ == "__main__":
+    main()
